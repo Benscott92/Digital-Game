@@ -24,18 +24,16 @@ class Digimon extends React.Component{
     
     
     this.state = {
-      currentRank : 1,
-      name: this.props.name[0],
-      testImg: this.props.defaultimage[0],
+      currentRank : 0,
+      name: this.props.name,
+      testImg: this.props.defaultimage,
     }
   }
 
   digivole = (event) => {
-    if(this.state.currentRank < this.props.name.length){
+    if(this.state.currentRank < this.props.name.length - 1){
       return this.setState((state, props)=>(
         { currentRank : state.currentRank + 1,
-          name: props.name[this.state.currentRank],
-          testImg: props.defaultimage[this.state.currentRank]
         })
       )
     }
@@ -44,8 +42,8 @@ class Digimon extends React.Component{
   render(){
     return (
     <div>
-      <h1>{this.state.name}</h1>
-      <img src={this.state.testImg} />
+      <h1>{this.state.name[this.state.currentRank]}</h1>
+      <img src={this.state.testImg[this.state.currentRank]} />
       <br />
       <button onClick={this.digivole} >Digivole!</button>
     </div>
