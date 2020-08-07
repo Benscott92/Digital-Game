@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.imgandstats{
+  display: flex;
+}
+
+.statblock{
+  margin-right: 15px;
+}
+
+button{
+  margin: 5px
+}

@@ -27,25 +27,78 @@ class Digimon extends React.Component{
       currentRank : 0,
       name: this.props.name,
       testImg: this.props.defaultimage,
+      strength: Math.floor(Math.random() * 10) + 5,
+      hunger: 0,
+      mood: 5,
+      EXP: 0,
+      currentDifficulty: 10,
+    }
+  }
+
+  train = (event) =>{
+    return this.setState((state, props) =>(
+      {strength: state.strength + Math.floor(Math.random()*10 + 2),
+        hunger: state.hunger + 2,
+        mood: state.mood - 1
+        }
+    ))
+  }
+
+  feed = (event) => {
+    return this.setState((state, props) =>(
+      {hunger: state.hunger - Math.floor(Math.random() * 3 + 1)}
+    ))
+  }
+
+  play = (event) => {
+    return this.setState((state, props) => (
+      {mood: state.mood + Math.floor(Math.random() * 3 + 1)}
+    ))
+  }
+
+  fight = (event) => {
+    if(this.state.strength > Math.random() * this.state.currentDifficulty + 5){
+      return this.setState((state, props) => (
+        {EXP: state.EXP + Math.floor(Math.random() * state.currentDifficulty) ,
+        currentDifficulty: state.currentDifficulty + Math.floor(Math.random() * 10),
+        mood: state.mood - 2,
+        hunger: state.hunger + 2,
+
+        }
+      ))
     }
   }
 
   digivole = (event) => {
     if(this.state.currentRank < this.props.name.length - 1){
       return this.setState((state, props)=>(
-        { currentRank : state.currentRank + 1,
-        })
+          { currentRank : state.currentRank + 1,}
+        )
       )
     }
-    }
+  }
 
   render(){
     return (
     <div>
       <h1>{this.state.name[this.state.currentRank]}</h1>
-      <img src={this.state.testImg[this.state.currentRank]} />
+      <div className='imgandstats'>
+        <div className = 'statblock' >
+            <h3>Strength: {this.state.strength} </h3>
+            <h3>Hunger: {this.state.hunger} </h3>
+            <h3>Happiness: {this.state.mood} </h3>
+            <h3>EXP: {this.state.EXP} </h3>
+        </div>
+        <img src={this.state.testImg[this.state.currentRank]} />
+      </div>
       <br />
-      <button onClick={this.digivole} >Digivole!</button>
+      <div className='buttonspace'>
+        <button onClick={this.play} >Play</button>
+        <button onClick= {this.feed} >Feed</button>
+        <button onClick={this.train} >Train</button>
+        <button onClick={this.fight} >Fight</button>
+        <button onClick={this.digivole} >Digivole!</button>
+      </div>
     </div>
   )}
 }
