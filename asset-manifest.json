@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Benscott92/Digital-Game/static/css/main.02b60e0f.chunk.css",
+    "main.js": "/Benscott92/Digital-Game/static/js/main.504cd6c1.chunk.js",
+    "main.js.map": "/Benscott92/Digital-Game/static/js/main.504cd6c1.chunk.js.map",
+    "runtime-main.js": "/Benscott92/Digital-Game/static/js/runtime-main.d209060e.js",
+    "runtime-main.js.map": "/Benscott92/Digital-Game/static/js/runtime-main.d209060e.js.map",
+    "static/js/2.41302f29.chunk.js": "/Benscott92/Digital-Game/static/js/2.41302f29.chunk.js",
+    "static/js/2.41302f29.chunk.js.map": "/Benscott92/Digital-Game/static/js/2.41302f29.chunk.js.map",
+    "index.html": "/Benscott92/Digital-Game/index.html",
+    "precache-manifest.a8e5ce798ccc1432c5a5c707948c89bf.js": "/Benscott92/Digital-Game/precache-manifest.a8e5ce798ccc1432c5a5c707948c89bf.js",
+    "service-worker.js": "/Benscott92/Digital-Game/service-worker.js",
+    "static/css/main.02b60e0f.chunk.css.map": "/Benscott92/Digital-Game/static/css/main.02b60e0f.chunk.css.map",
+    "static/js/2.41302f29.chunk.js.LICENSE.txt": "/Benscott92/Digital-Game/static/js/2.41302f29.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/Benscott92/Digital-Game/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d209060e.js",
+    "static/js/2.41302f29.chunk.js",
+    "static/css/main.02b60e0f.chunk.css",
+    "static/js/main.504cd6c1.chunk.js"
+  ]
+}
